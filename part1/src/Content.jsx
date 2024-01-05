@@ -7,7 +7,7 @@ const Part = (props) => {
 const Content = (props) => {
     return (
         <div>
-            {props.content.map(function (part) {
+            {props.parts.map(function (part) {
                 return <Part part={part.part} excercises={part.excercises} />
             })}
         </div>
