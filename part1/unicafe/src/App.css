@@ -1,0 +1,11 @@
+table {
+    table-layout: fixed;
+}
+table, tr, td, th {
+    text-align: left;
+}
+
+
+td {
+    width: min-content;
+}
