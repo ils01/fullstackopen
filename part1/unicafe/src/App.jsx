@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Button from "./Button";
+import Statistics from "./Statistics.jsx";
 
 function App() {
     const [good, setGood] = useState(0);
@@ -24,7 +25,6 @@ function App() {
         setAverage(newAvg)
     }
     function updatePos() {
-        console.log('newgood', newGood)
         newPos = (newGood || 0) / (newAll) * 100
         setPositive(newPos)
     }
@@ -55,16 +55,8 @@ function App() {
                 <Button onClick={addNeutral} text="neutral"></Button>
                 <Button onClick={addBad} text="bad"></Button>
             </div>
-            <h2>statisctics</h2>
-            <div>
-                <p>good {good}</p>
-                <p>neutral {neutral}</p>
-                <p>bad {bad}</p>
-                <hr />
-                <p>all {all}</p>
-                <p>average {average}</p>
-                <p>positive {positive} %</p>
-            </div>
+            <Statistics good={good} bad={bad} neutral={neutral} average={average} positive={positive} all={all} />
+
         </div>
     )
 }
