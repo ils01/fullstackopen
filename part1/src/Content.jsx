@@ -1,8 +1,14 @@
+const Part = (props) => {
+    return (
+        <p>{props.part} {props.excercises}</p>
+    )
+}
+
 const Content = (props) => {
     return (
         <div>
             {props.content.map(function (part) {
-                return <p>{part.part} {part.excercises}</p>
+                return <Part part={part.part} excercises={part.excercises} />
             })}
         </div>
     )
